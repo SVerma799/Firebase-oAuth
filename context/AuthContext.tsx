@@ -7,6 +7,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   FacebookAuthProvider,
+  GithubAuthProvider,
 } from "firebase/auth";
 import { auth } from "../firebase/clientApp";
 
@@ -67,7 +68,10 @@ const AuthContextProvider = ({ children }: { children: React.ReactNode }) => {
         provider = new GoogleAuthProvider();
       } else if (providerName === "facebook") {
         provider = new FacebookAuthProvider();
+      } else if (providerName === "github") {
+        provider = new GithubAuthProvider();
       }
+
       if (provider) result = await signInWithPopup(auth, provider);
       if (result) {
         setUser(result.user);

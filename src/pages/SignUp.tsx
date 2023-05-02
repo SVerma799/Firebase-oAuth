@@ -80,6 +80,26 @@ const SignUp: FC<SignUpProps> = ({}) => {
         >
           Sign Up with Facebook
         </button>
+        <Button
+          onClick={() => {
+            SignUpWithProvider("github");
+          }}
+          className="bg-gray-800 text-white font-bold py-2 px-4 rounded inline-flex items-center"
+        >
+          <svg
+            className="w-5 h-5 mr-2"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.007-.82-.01-1.49-2.01.38-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.53.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.96 0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 3.76-3.65 3.96.28.25.54.74.54 1.49 0 1.08-.01 1.95-.01 2.22 0 .21.15.46.55.38A8.014 8.014 0 0016 8c0-4.418-3.582-8-8-8z"
+            />
+          </svg>
+          <span>Sign up with GitHub</span>
+        </Button>
       </div>
     </div>
   );
